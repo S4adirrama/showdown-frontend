@@ -59,7 +59,7 @@ const News = ({setIndexOfPost}) => {
 
       <main>
 
-        {posts.map((post, index) => (
+        {posts.length ? posts.map((post, index) => (
           <Link to={`/posts/${post.id}`}>
             <div class="rule-block" onClick={() => { console.log(`length: ${posts.length} - index: ${index}`); setIndexOfPost(posts.length - index) }}>
               <div class="rule-image">
@@ -77,7 +77,7 @@ const News = ({setIndexOfPost}) => {
 
           </Link>
 
-        ))}
+        )):<p style={{textAlign: "center", fontSize: "22px"}}> Загрузка постов... </p>} 
 
         {/*         <a href="#" class="rule-block">
           <div class="rule-image">

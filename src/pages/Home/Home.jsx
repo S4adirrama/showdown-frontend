@@ -3,6 +3,8 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import SDlogo from "../../assets/sdlogo.webp";
+import DirectorPhoto from "../../assets/director.webp";
+import RulesPhoto from "../../assets/rules.webp";
 
 const Home = () => {
   const { t, i18n } = useTranslation("global");
@@ -46,7 +48,7 @@ const Home = () => {
 
       <section className="director-block">
         <div className="director-photo">
-          <img src="src/assets/director.webp" alt="Серик Жузбай" />
+          <img src={DirectorPhoto} alt="Серик Жузбай" />
         </div>
         <div className="director-info">
           <h2>{t('director.title')}</h2>
@@ -61,7 +63,7 @@ const Home = () => {
           <p className="description">{t('showdown.description')}</p>
         </div>
         <div className="photo">
-          <img src="src/assets/rules.webp" alt="Логотип Showdown" />
+          <img src={RulesPhoto} alt="Логотип Showdown" />
         </div>
       </section>
 

@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./AboutUs.css";
+import SDlogo from "../../assets/sdlogo.webp";
+import AboutUsImage from "../../assets/aboutus.webp";
 
 const AboutUs = () => {
-  const { t, i18n } = useTranslation("global"); // access the translation function and i18n instance
+  const { t, i18n } = useTranslation("global");
 
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
@@ -15,7 +17,7 @@ const AboutUs = () => {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <img src="src/assets/sdlogo.webp" alt="Логотип" />
+            <img src={SDlogo} alt="Логотип" />
           </div>
           <nav className="nav">
             <ul>
@@ -40,7 +42,7 @@ const AboutUs = () => {
         <div className="aim">
           <h1>{t('aboutUs.title')}</h1>
         </div>
-        <img src="src/assets/aboutus.webp" className="aboutus" alt="error" />
+        <img src={AboutUsImage} className="aboutus" alt="error" />
       </section>
 
       <section className="layout-section">
@@ -98,16 +100,22 @@ const AboutUs = () => {
               rel="noopener noreferrer"
               style={{ textDecoration: 'none', color: '#fff' }}
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                alt="Instagram"
+              <span
                 style={{
+                  display: 'inline-block',
                   width: '30px',
                   height: '30px',
-                  verticalAlign: 'middle',
+                  backgroundColor: '#4caf50',
+                  borderRadius: '50%',
+                  textAlign: 'center',
+                  lineHeight: '30px',
+                  color: '#fff',
                   marginRight: '10px',
+                  fontSize: '1.2rem',
                 }}
-              />
+              >
+                I
+              </span>
               Instagram
             </a>
           </div>

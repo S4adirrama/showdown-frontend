@@ -2,12 +2,17 @@ import React from "react";
 import "./Rules.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // For multi-language support
+import SDlogo from "../../assets/sdlogo.webp";
+import RulesImage1 from "../../assets/rules1.jpg";
+import RulesImage2 from "../../assets/rules2.avif";
+import RulesImage3 from "../../assets/rules3.avif";
+import RulesImage4 from "../../assets/rules4.avif";
 
 const Rules = () => {
   const { t, i18n } = useTranslation("global"); // Access translations and i18n instance
 
   const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);  // Switch the language
+    i18n.changeLanguage(lang); // Switch the language
   };
 
   return (
@@ -15,7 +20,7 @@ const Rules = () => {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <img src="src/assets/sdlogo.webp" alt="Логотип" />
+            <img src={SDlogo} alt="Логотип" />
           </div>
           <nav className="nav">
             <ul>
@@ -39,7 +44,7 @@ const Rules = () => {
       {/* Showdown Section */}
       <section className="rule-block">
         <div className="rule-image">
-          <img src="src/assets/rules1.jpg" alt="Игрок за столом" />
+          <img src={RulesImage1} alt="Игрок за столом" />
         </div>
         <div className="rule-text">
           <h2>{t("rules.whatIsShowdown.title")}</h2>
@@ -54,14 +59,14 @@ const Rules = () => {
           <p>{t("rules.gameTable.content")}</p>
         </div>
         <div className="rule-image">
-          <img src="src/assets/rules2.avif" alt="Стол для Шоудана" />
+          <img src={RulesImage2} alt="Стол для Шоудана" />
         </div>
       </section>
 
       {/* Equipment Section */}
       <section className="rule-block">
         <div className="rule-image">
-          <img src="src/assets/rules3.avif" alt="Перчатки и оборудование" />
+          <img src={RulesImage3} alt="Перчатки и оборудование" />
         </div>
         <div className="rule-text">
           <h2>{t("rules.equipment.title")}</h2>
@@ -76,7 +81,7 @@ const Rules = () => {
           <p>{t("rules.gameGoal.content")}</p>
         </div>
         <div className="rule-image">
-          <img src="src/assets/rules4.avif" alt="Мяч и ракетка" />
+          <img src={RulesImage4} alt="Мяч и ракетка" />
         </div>
       </section>
 
@@ -108,16 +113,22 @@ const Rules = () => {
               rel="noopener noreferrer"
               style={{ textDecoration: 'none', color: '#fff' }}
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                alt="Instagram"
+              <span
                 style={{
+                  display: 'inline-block',
                   width: '30px',
                   height: '30px',
-                  verticalAlign: 'middle',
+                  backgroundColor: '#4caf50',
+                  borderRadius: '50%',
+                  textAlign: 'center',
+                  lineHeight: '30px',
+                  color: '#fff',
                   marginRight: '10px',
+                  fontSize: '1.2rem',
                 }}
-              />
+              >
+                I
+              </span>
               Instagram
             </a>
           </div>
