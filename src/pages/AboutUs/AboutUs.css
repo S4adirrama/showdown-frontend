@@ -1,0 +1,323 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4c4b93, #2a2a72);
+  overflow-x: hidden;
+  /* Убираем горизонтальный скроллинг */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Хедер */
+.header {
+  background-color: #cbc3d9;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo {
+  flex: 0 1 auto;
+  margin-right: 80px;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+  max-width: 190px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  /* Оптимальное расстояние */
+  flex: 1;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  margin: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+/* Стиль для блока с выбором языка */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.language-selector ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.language-selector ul li {
+  margin-left: 10px;
+}
+
+.language-selector ul li button {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.language-selector ul li button:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+.aboutus {
+  margin-top: 33px;
+  margin-left: 175px;
+  align-items: center;
+  display: block;
+  flex: auto;
+  width: 75%;
+  object-fit: cover;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: yellow;
+}
+
+.aim h1 {
+  font-size: 2.5em;
+  align-items: center;
+  text-align: center;
+  color: azure;
+  font-family: Gill Sans, sans-serif;
+}
+
+/* Основной стиль для секции */
+.layout-section {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #4c4b93, #2a2a72);
+  /* Градиентный фон */
+  color: white;
+  /* Белый цвет текста */
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+  /* Современный шрифт */
+}
+
+/* Общий стиль для блоков */
+.horizontal-block,
+.vertical-block {
+  background: rgba(255, 255, 255, 0.1);
+  /* Полупрозрачный фон внутри блоков */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* Тень для объема */
+  border-radius: 15px;
+  /* Скругленные углы */
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
+  /* Центрирование текста */
+}
+
+/* Верхний и нижний горизонтальные блоки */
+.horizontal-block {
+  width: 97%;
+  /* Блок занимает всю ширину */
+}
+
+/* Средние вертикальные блоки */
+.vertical-blocks {
+  display: flex;
+  /* Выравнивание в ряд */
+  justify-content: space-between;
+  /* Равномерное распределение блоков */
+  gap: 20px;
+  /* Отступы между блоками */
+  margin: 20px 0;
+}
+
+.vertical-block {
+  flex: 1;
+  /* Блоки равной ширины */
+  max-width: 30%;
+  /* Ограничение ширины для красоты */
+}
+
+/* Стили текста */
+.horizontal-block h2,
+.vertical-block h3 {
+  font-family: 'Montserrat', sans-serif;
+  /* Красивый шрифт заголовков */
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.horizontal-block p,
+.vertical-block p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  /* Удобочитаемый текст */
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .container {
+    padding: 10px 5%;
+    /* Уменьшаем отступы для экрана размером меньше 1024px */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    /* Навигационные элементы становятся вертикальными */
+    gap: 10px;
+  }
+
+  .aboutus {
+    margin-left: 0;
+    width: 90%;
+    /* Уменьшаем ширину */
+    height: auto;
+    /* Высота регулируется автоматически */
+  }
+
+  .aim h1 {
+    font-size: 2rem;
+    /* Меньший размер заголовка на маленьких экранах */
+  }
+
+  .layout-section {
+    padding: 30px 20px;
+    /* Уменьшаем отступы */
+  }
+
+  .vertical-blocks {
+    flex-direction: column;
+    /* Вертикальное расположение блоков */
+    gap: 15px;
+    /* Меньшие отступы */
+  }
+
+  .vertical-block {
+    max-width: 100%;
+    /* Блоки занимают всю ширину */
+  }
+
+  .horizontal-block {
+    width: 100%;
+    /* Горизонтальные блоки занимают всю ширину */
+  }
+
+  .horizontal-block h2,
+  .vertical-block h3 {
+    font-size: 1.4em;
+    /* Уменьшаем размер заголовков */
+  }
+
+  .horizontal-block p,
+  .vertical-block p {
+    font-size: 1em;
+    /* Уменьшаем размер текста */
+  }
+}
+
+/* Мобильная адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+  .logo img {
+    height: 180px;
+    /* Меньше размер логотипа */
+    width: auto;
+    /* Ширина подстраивается */
+  }
+
+  .container {
+    flex-direction: column;
+    /* Контейнер становится вертикальным */
+    align-items: center;
+    /* Центрируем элементы */
+    padding: 15px 5%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    /* Навигация вертикальная */
+    align-items: center;
+    /* Выравнивание по центру */
+    gap: 15px;
+  }
+
+  .aboutus {
+    margin-left: 0;
+    width: 100%;
+    /* Ширина блока 100% */
+    height: auto;
+    /* Высота автоматически */
+  }
+
+  .aim h1 {
+    font-size: 1.8rem;
+    /* Меньший размер заголовка */
+  }
+
+  .layout-section {
+    padding: 20px 10px;
+    /* Меньше отступов */
+  }
+
+  .vertical-blocks {
+    flex-direction: column;
+    /* Блоки располагаются вертикально */
+    gap: 10px;
+    /* Меньше отступов */
+  }
+
+  .vertical-block {
+    max-width: 100%;
+    /* Блоки занимают всю ширину */
+  }
+
+  .horizontal-block h2,
+  .vertical-block h3 {
+    font-size: 1.2em;
+    /* Уменьшение размера заголовков */
+  }
+
+  .horizontal-block p,
+  .vertical-block p {
+    font-size: 0.95em;
+    /* Меньший размер текста */
+  }
+}

@@ -1,0 +1,377 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #310c75;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  /* Убираем горизонтальный скроллинг */
+  width: 100%;
+}
+
+/* Контейнер */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  flex-wrap: wrap;
+  /* Разрешаем перенос элементов */
+}
+
+/* Хедер */
+.header {
+  background-color: #cbc3d9;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo {
+  flex: 0 1 auto;
+  margin-right: 80px;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+  max-width: 190px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  /* Оптимальное расстояние */
+  flex: 1;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  margin: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+/* Стиль для блока с выбором языка */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.language-selector ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.language-selector ul li {
+  margin-left: 10px;
+}
+
+.language-selector ul li button {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.language-selector ul li button:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+/* Секция Showdown */
+.showdown {
+  position: relative;
+  background-image: url('src/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Секция с директором */
+.director-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px blue;
+}
+
+.director-photo img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.director-info {
+  flex: 1;
+  text-align: left;
+}
+
+.director-info h2 {
+  font-size: 2rem;
+  color: #4b3f72;
+}
+
+.director-info h3 {
+  font-size: 1.6rem;
+  color: #2e1f47;
+  margin: 5px 0;
+}
+
+.director-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Основной стиль блока */
+.showdown-section {
+  background-color: #310c75;
+  padding: 40px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Стили для текста */
+.content {
+  flex: 1;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  max-width: 600px;
+  word-wrap: break-word;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: whitesmoke;
+  margin: 0 auto;
+}
+
+/* Стили для фотографии */
+.photo {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.photo img {
+  height: auto;
+  width: 100%;
+  max-width: 380px;
+  border: 3px solid #8c7bbd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Блок фона */
+.showdown-news {
+  background-color: #310c75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Блок новостей */
+.news {
+  height: auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 4px;
+}
+
+/* Текст в блоке */
+.news h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* Видео контейнер */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.video {
+  margin-top: 20px;
+  margin-left: 25px;
+  border-radius: 10px;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 1024px) {
+  .container {
+    padding: 10px 3%;
+  }
+
+  .logo img {
+    max-width: 160px;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .director-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showdown {
+    height: 50vh;
+  }
+
+  .showdown-section {
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .photo img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Медиазапросы для мобильных устройств (меньше 768px) */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 140px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .showdown {
+    height: 45vh;
+    margin-top: 10px;
+  }
+
+  .showdown-section {
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo img {
+    max-width: 100%;
+  }
+
+  .news {
+    width: 100%;
+  }
+
+  .video-container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,177 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4c4b93, #2a2a72);
+  overflow-x: hidden;
+  /* Убираем горизонтальный скроллинг */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Хедер */
+.header {
+  background-color: #cbc3d9;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo {
+  flex: 0 1 auto;
+  margin-right: 80px;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+  max-width: 190px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  /* Оптимальное расстояние */
+  flex: 1;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  margin: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+/* Стиль для блока с выбором языка */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.language-selector ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.language-selector ul li {
+  margin-left: 10px;
+}
+
+.language-selector ul li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.language-selector ul li a:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+
+
+/* Контейнер для карточек */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет переносить строки */
+  justify-content: center; /* Центрирует строки */
+  gap: 20px; /* Отступы между карточками */
+  margin: 20px;
+}
+
+/* Карточка филиала */
+.branch-card {
+  background-color: #ffffff; /* Белый фон */
+  border: 2px solid #e0e0e0; /* Серый бордер */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  width: 250px; /* Фиксированная ширина карточки */
+  text-align: center; /* Центровка текста */
+  padding: 20px; /* Внутренние отступы */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
+}
+
+/* Анимация при наведении */
+.branch-card:hover {
+  transform: translateY(-10px); /* Поднимает карточку */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Усиливает тень */
+  border-color: #5c9cff; /* Смена цвета бордера */
+}
+
+/* Логотип филиала */
+.branch-logo {
+  width: 80px; /* Фиксированный размер логотипа */
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* Название города */
+.branch-city {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Владелец */
+.branch-owner {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Адрес */
+.branch-address {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Телефон */
+.branch-phone a {
+  font-size: 14px;
+  color: #007bff; /* Синий текст */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.branch-phone a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}

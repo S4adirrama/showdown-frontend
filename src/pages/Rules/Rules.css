@@ -1,0 +1,218 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4c4b93, #2a2a72);
+  overflow-x: hidden;
+  /* Убираем горизонтальный скроллинг */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Хедер */
+.header {
+  background-color: #cbc3d9;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo {
+  flex: 0 1 auto;
+  margin-right: 80px;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+  max-width: 190px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  /* Оптимальное расстояние */
+  flex: 1;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  margin: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+
+/* Стиль для блока с выбором языка */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.language-selector ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.language-selector ul li {
+  margin-left: 10px;
+}
+
+.language-selector ul li button {
+  text-decoration: none;
+  color: #333;
+  background-color: #8c7bbd;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.language-selector ul li button:hover {
+  background-color: #64549b;
+  color: #fff;
+}
+/* Основная секция */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+/* Блок с правилами */
+.rule-block {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  margin: 20px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rule-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.rule-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rule-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.rule-text h2 {
+  color: #4c5c96;
+  margin-bottom: 10px;
+  font-size: 1.6em; /* Размер заголовка */
+}
+
+.rule-text p {
+  margin-bottom: 10px;
+  font-size: 1.1em; /* Размер текста */
+  line-height: 1.6; /* Удобочитаемость */
+}
+
+/* Адаптивность для экранов до 1024px */
+@media (max-width: 1024px) {
+  .container {
+      padding: 10px 5%;
+  }
+
+  .nav ul {
+      flex-direction: column; /* Навигационные элементы становятся вертикальными */
+      gap: 10px;
+  }
+
+  .rule-block {
+      flex-direction: column; /* Изображение и текст будут в колонку */
+  }
+
+  .rule-image,
+  .rule-text {
+      flex: 1 100%;
+  }
+
+  .rule-text h2 {
+      font-size: 1.4em; /* Уменьшаем размер заголовка на экранах меньше 1024px */
+  }
+
+  .rule-text p {
+      font-size: 1em; /* Меньше размер текста */
+  }
+}
+
+/* Мобильная адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+  .logo img {
+      height: 180px; /* Меньше размер логотипа */
+      width: auto; /* Ширина логотипа подстраивается */
+  }
+
+  .container {
+      flex-direction: column; /* Контейнер становится вертикальным */
+      align-items: center; /* Центрируем элементы */
+      padding: 15px 5%;
+  }
+
+  .nav ul {
+      flex-direction: column; /* Навигация вертикальная */
+      align-items: center; /* Выравнивание по центру */
+      gap: 15px;
+  }
+
+  .rule-block {
+      flex-direction: column; /* Блоки изображений и текста становятся вертикальными */
+      margin: 15px 0;
+  }
+
+  .rule-image,
+  .rule-text {
+      flex: 1 100%;
+  }
+
+  .rule-text h2 {
+      font-size: 1.2em; /* Меньше размер заголовков */
+  }
+
+  .rule-text p {
+      font-size: 0.95em; /* Меньше размер текста */
+  }
+}
