@@ -79,7 +79,7 @@ const News = ({ setIndexOfPost }) => {
       </header>
 
       <main>
-        {posts.lenght ? posts.map((post, index) => (
+        {posts.length ? posts.map((post, index) => (
           <Link to={`/posts/${post.id}`} key={post.id}>
             <div
               className="rule-block"
@@ -100,7 +100,7 @@ const News = ({ setIndexOfPost }) => {
               </div>
             </div>
           </Link>
-        )) : <p styles={{textAlign: "center", fontSize: "22px" }}>Загрузка постов...</p>}
+        )) : <p style={{textAlign: "center", fontSize: "22px"}}>Загрузка постов...</p>}
       </main>
 
       <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
