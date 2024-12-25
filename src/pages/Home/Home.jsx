@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import SDlogo from "../../assets/sdlogo.webp";
 
 const Home = () => {
   const { t, i18n } = useTranslation("global");
@@ -15,7 +16,7 @@ const Home = () => {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <img src="src/assets/sdlogo.webp" alt="Логотип" />
+            <img src={SDlogo} alt="Логотип" />
           </div>
           <nav className="nav">
             <ul>
