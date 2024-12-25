@@ -269,6 +269,11 @@ body {
     align-items: center;
   }
 
+  .nav ul li{
+    display: block;
+    margin-top: 15px !important;
+  }
+
   .card {
     flex-direction: column;
     width: 100%;

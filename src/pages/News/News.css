@@ -148,3 +148,11 @@ main {
 .rule-text p {
   margin-bottom: 10px;
 }
+
+
+@media (max-width: 1024px) {
+  .nav ul li{
+    display: block;
+    margin-top: 15px !important;
+  }
+}

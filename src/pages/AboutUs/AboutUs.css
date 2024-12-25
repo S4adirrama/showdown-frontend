@@ -195,6 +195,12 @@ body {
 
 /* Адаптивность */
 @media (max-width: 1024px) {
+
+  .nav ul li{
+    display: block;
+    margin-top: 15px !important;
+  }
+
   .container {
     padding: 10px 5%;
     /* Уменьшаем отступы для экрана размером меньше 1024px */

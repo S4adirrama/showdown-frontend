@@ -161,6 +161,11 @@ main {
       gap: 10px;
   }
 
+  .nav ul li{
+    display: block;
+    margin-top: 15px !important;
+  }
+
   .rule-block {
       flex-direction: column; /* Изображение и текст будут в колонку */
   }
