@@ -42,7 +42,7 @@ const Home = () => {
       <section className="showdown">
         <div className="overlay">
           <h1>{t('showdown.title')}</h1>
-          <p>{t('showdown.description')}</p>
+          <p>Федерация настольного тенниса для незрячих людей</p>
         </div>
       </section>
 
