@@ -68,14 +68,22 @@ const Home = () => {
       </section>
 
       <section className="showdown-news">
+      <a
+              href="https://www.showdown.kz/posts/8841cf1e-1618-4dd6-8ed6-bf0992bac05c"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: '#fff' }}
+            >
         <div className="contenе">
           <div className="news">
             <h1>{t('showdown.homenews')}</h1>
           </div>
         </div>
+            </a>
       </section>
 
-      <section style={{ padding: '40px 0', backgroundColor: '#310c75' }}>
+      <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <section style={{ padding: '40px 0' }}>
         <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '30px', color: '#fff' }}>
           {t('workingDays.title')}
         </h2>
@@ -112,8 +120,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
         <div style={{
           maxWidth: '1400px',
           margin: '0 auto',
@@ -133,9 +139,30 @@ const Home = () => {
           </div>
 
           <div style={{ flex: '1 1 300px', margin: '20px' }}>
-            <h3>Мы в социальных сетях:</h3>
+            <h3>Серик Жузбай:</h3>
             <a
               href="https://www.instagram.com/serikzhuzbai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: '#fff' }}
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                alt="Instagram"
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  verticalAlign: 'middle',
+                  marginRight: '10px',
+                }}
+              />
+              Instagram
+            </a>
+          </div>
+          <div style={{ flex: '1 1 300px', margin: '20px' }}>
+            <h3>Шоудаун:</h3>
+            <a
+              href="https://www.instagram.com/showdown.kz?igsh=MWljczcxaWMzanoxdA=="
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: 'none', color: '#fff' }}
@@ -160,3 +187,4 @@ const Home = () => {
 };
 
 export default Home;
+

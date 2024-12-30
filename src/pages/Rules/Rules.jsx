@@ -87,6 +87,43 @@ const Rules = () => {
 
       {/* Footer Section */}
       <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <section style={{ padding: '40px 0' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '30px', color: '#fff' }}>
+          {t('workingDays.title')}
+        </h2>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '40px',
+          flexWrap: 'wrap',
+          maxWidth: '1200px',
+          margin: '0 auto',
+        }}>
+          <div style={{
+            backgroundColor: '#fff',
+            padding: '20px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            width: '400px',
+          }}>
+            <h3 style={{ textAlign: 'center', color: '#4caf50', fontSize: '1.8rem' }}>
+              {t('workingDays.mondayToFriday')}
+            </h3>
+          </div>
+
+          <div style={{
+            backgroundColor: '#fff',
+            padding: '20px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            width: '400px',
+          }}>
+            <h3 style={{ textAlign: 'center', color: '#4caf50', fontSize: '1.8rem' }}>
+              {t('workingDays.weekend')}
+            </h3>
+          </div>
+        </div>
+      </section>
         <div style={{
           maxWidth: '1400px',
           margin: '0 auto',
@@ -106,29 +143,44 @@ const Rules = () => {
           </div>
 
           <div style={{ flex: '1 1 300px', margin: '20px' }}>
-            <h3>Мы в социальных сетях:</h3>
+            <h3>Серик Жузбай:</h3>
             <a
               href="https://www.instagram.com/serikzhuzbai/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: 'none', color: '#fff' }}
             >
-              <span
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                alt="Instagram"
                 style={{
-                  display: 'inline-block',
                   width: '30px',
                   height: '30px',
-                  backgroundColor: '#4caf50',
-                  borderRadius: '50%',
-                  textAlign: 'center',
-                  lineHeight: '30px',
-                  color: '#fff',
+                  verticalAlign: 'middle',
                   marginRight: '10px',
-                  fontSize: '1.2rem',
                 }}
-              >
-                I
-              </span>
+              />
+              Instagram
+            </a>
+          </div>
+          <div style={{ flex: '1 1 300px', margin: '20px' }}>
+            <h3>Шоудаун:</h3>
+            <a
+              href="https://www.instagram.com/showdown.kz?igsh=MWljczcxaWMzanoxdA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: '#fff' }}
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                alt="Instagram"
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  verticalAlign: 'middle',
+                  marginRight: '10px',
+                }}
+              />
               Instagram
             </a>
           </div>

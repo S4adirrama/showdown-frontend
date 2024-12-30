@@ -4,8 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #4c4b93, #2a2a72);
-  overflow-x: hidden;
-  /* Убираем горизонтальный скроллинг */
+  overflow-x: hidden; /* Убираем горизонтальный скроллинг */
 }
 
 .container {
@@ -41,7 +40,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  /* Оптимальное расстояние */
   flex: 1;
 }
 
@@ -106,7 +104,6 @@ body {
 }
 
 
-
 main {
   max-width: 1200px;
   margin: 20px auto;
@@ -115,17 +112,19 @@ main {
 
 .rule-block {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background: #fff;
   margin: 28px 0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: black;
+  max-height: 500px;
+  overflow-y: auto; 
 }
 
 .rule-image {
-  flex: 1;
+  flex: 0 0 50%;
   min-width: 300px;
 }
 
@@ -136,8 +135,14 @@ main {
 }
 
 .rule-text {
-  flex: 1;
+  flex: 1; 
   padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word; 
+  overflow-y: auto; 
+  max-height: 480px; 
+  box-sizing: border-box; 
 }
 
 .rule-text h2 {
@@ -147,12 +152,42 @@ main {
 
 .rule-text p {
   margin-bottom: 10px;
+  overflow-wrap: break-word; 
 }
 
 
 @media (max-width: 1024px) {
-  .nav ul li{
+  .nav ul li {
     display: block;
     margin-top: 15px !important;
+  }
+
+  .rule-block {
+    flex-direction: column; 
+    max-height: none; 
+  }
+
+  .rule-image {
+    flex: 0 0 auto; 
+    width: 100%; 
+  }
+
+  .rule-text {
+    padding: 15px;
+    font-size: 0.95rem;
+    max-height: none; 
+  }
+}
+
+@media (max-width: 768px) {
+  .rule-block {
+    max-height: none; 
+  }
+
+  .rule-text {
+    font-size: 0.9rem; 
+    line-height: 1.4; 
+    padding: 10px;
+    max-height: none; 
   }
 }
