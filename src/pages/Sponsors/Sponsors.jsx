@@ -10,6 +10,8 @@ import Sponsor4 from "../../assets/son4.avif";
 import Sponsor5 from "../../assets/son5.avif";
 import Sponsor6 from "../../assets/son6.avif";
 import Sponsor7 from "../../assets/son7.avif";
+import SQlogo from "../../assets/sq_logo.png";
+
 
 const Sponsors = () => {
   const { t, i18n } = useTranslation("global");
@@ -121,6 +123,12 @@ const Sponsors = () => {
       </main>
 
       <footer style={{ backgroundColor: "#222", color: "#fff", padding: "20px", textAlign: "center" }}>
+        <div className="footer-logo">
+          <img src={SQlogo} alt = "missing photos"/>
+          <p className="footer-text">
+            &copy; При поддержке фонда <a href="https://sportqory.kz">Sport Qory</a>
+          </p>
+        </div>
         <section style={{ padding: "40px 0" }}>
           <h2 style={{ textAlign: "center", fontSize: "2.5rem", marginBottom: "30px", color: "#fff" }}>
             {t("workingDays.title")}

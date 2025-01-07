@@ -7,6 +7,8 @@ import RulesImage1 from "../../assets/rules1.jpg";
 import RulesImage2 from "../../assets/rules2.avif";
 import RulesImage3 from "../../assets/rules3.avif";
 import RulesImage4 from "../../assets/rules4.avif";
+import SQlogo from "../../assets/sq_logo.png";
+
 
 const Rules = () => {
   const { t, i18n } = useTranslation("global"); // Access translations and i18n instance
@@ -87,6 +89,12 @@ const Rules = () => {
 
       {/* Footer Section */}
       <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <div className="footer-logo">
+          <img src={SQlogo} alt = "missing photos"/>
+            <p className="footer-text">
+              &copy; При поддержке фонда <a href="https://sportqory.kz">Sport Qory</a>
+            </p>
+          </div>
         <section style={{ padding: '40px 0' }}>
         <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '30px', color: '#fff' }}>
           {t('workingDays.title')}

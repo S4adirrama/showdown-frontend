@@ -19,6 +19,8 @@ import BranchImage13 from "../../assets/P13.webp";
 import BranchImage14 from "../../assets/P14.webp";
 import BranchImage15 from "../../assets/P16.webp";
 import BranchImage16 from "../../assets/P17.webp";
+import SQlogo from "../../assets/sq_logo.png";
+
 
 const Filial = () => {
   const { t, i18n } = useTranslation("global");
@@ -171,7 +173,13 @@ const Filial = () => {
             
           </div>
 
-          <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+          <div className="footer-logo">
+                    <img src={SQlogo} alt = "missing photos"/>
+                    <p className="footer-text">
+                    &copy; При поддержке фонда <a href="https://sportqory.kz">Sport Qory</a>
+                    </p>
+                  </div>
         <section style={{ padding: '40px 0' }}>
         <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '30px', color: '#fff' }}>
           {t('workingDays.title')}

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./AboutUs.css";
 import SDlogo from "../../assets/sdlogo.webp";
 import AboutUsImage from "../../assets/aboutus.webp";
+import SQlogo from "../../assets/sq_logo.png";
 
 const AboutUs = () => {
   const { t, i18n } = useTranslation("global");
@@ -74,6 +75,12 @@ const AboutUs = () => {
       </section>
 
       <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <div className="footer-logo">
+          <img src={SQlogo} alt = "missing photos"/>
+          <p className="footer-text">
+          &copy; При поддержке фонда <a href="https://sportqory.kz">Sport Qory</a>
+          </p>
+        </div>
         <section style={{ padding: '40px 0' }}>
         <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '30px', color: '#fff' }}>
           {t('workingDays.title')}

@@ -19,6 +19,9 @@ import PostImage12 from "../../assets/post12.jpg";
 import PostImage13 from "../../assets/post13.jpg";
 import PostImage14 from "../../assets/post14.jpg";
 import PostImage15 from "../../assets/post15.jpg";
+import PostImage16 from "../../assets/post0.jpg"
+import SQlogo from "../../assets/sq_logo.png";
+
 
 const News = ({ setIndexOfPost }) => {
   const [posts, setPosts] = useState([]);
@@ -39,6 +42,8 @@ const News = ({ setIndexOfPost }) => {
     13: PostImage13,
     14: PostImage14,
     15: PostImage15,
+    0: PostImage16,
+
   };
 
   const getPosts = async () => {
@@ -102,21 +107,35 @@ const News = ({ setIndexOfPost }) => {
               }}
             >
               <div className="rule-image">
-                <img src={imageMapping[posts.length - index] || imageMapping[1]} alt="" />
+                <img src={imageMapping[15 - index] || imageMapping[0]} alt="" />
               </div>
               <div className="rule-text">
-                <p>{post.title.kz}</p>
-                <p>{post.description.kz}</p>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.title.kz }}
+                ></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.description.kz }}
+                ></div>
                 <hr />
-                <p>{post.title.ru}</p>
-                <p>{post.description.ru}</p>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.title.ru }}
+                ></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.description.ru }}
+                ></div>
+                </div>
               </div>
-            </div>
           </Link>
         )) : <p style={{textAlign: "center", fontSize: "22px"}}>Загрузка постов...</p>}
       </main>
 
       <footer style={{ backgroundColor: '#222', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <div className="footer-logo">
+          <img src={SQlogo} alt = "missing photos"/>
+          <p className="footer-text">
+            &copy; При поддержке фонда <a href="https://sportqory.kz">Sport Qory</a>
+          </p>
+        </div>
         <section style={{ padding: '40px 0' }}>
         <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '30px', color: '#fff' }}>
           {t('workingDays.title')}
