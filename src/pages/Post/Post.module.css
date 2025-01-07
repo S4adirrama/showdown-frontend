@@ -113,6 +113,22 @@
 .nextButton:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.video {
+  width: 100%;
+  max-width: 560px; /* Limit the width on larger screens */
+  aspect-ratio: 16 / 9; /* Maintains the 16:9 aspect ratio */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 @media (max-width: 768px) {
   .title {
@@ -138,4 +154,13 @@
     height: 30px;
     font-size: 14px;
   }
+  .video {
+    max-width: 100%; /* Full width on smaller screens */
+    aspect-ratio: 16 / 9;
+  }
+
+  .videoContainer {
+    gap: 10px; /* Reduce gap between videos on smaller screens */
+  }
 }
+
